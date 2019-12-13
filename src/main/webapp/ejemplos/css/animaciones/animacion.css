@@ -1,0 +1,25 @@
+.box-animacion{
+
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #8BC34A;  
+    animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        background-color: #8BC34A;  
+        border-radius: 0;
+    }
+    50% {
+        background-color:red;  
+        border-radius: 30%;
+    }
+    100% {
+        background-color: #8BC34A;  
+        border-radius: 0;
+        transform: rotate(360deg);
+        transform: rotate3d(30,30,30,720deg)
+    }
+  }

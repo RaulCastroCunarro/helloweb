@@ -1,0 +1,25 @@
+
+* { 
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-family: monospace;
+    color: red;
+    font-size: 3em;
+    text-shadow: 2px 3px 0px rgba(33,206,191,0.73);
+}
+
+canvas{
+    background-color: white;
+    border: 1px solid grey;
+    display: block;
+    margin: auto;
+    background-image: url("/helloweb/images/game-background.png");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+}
+

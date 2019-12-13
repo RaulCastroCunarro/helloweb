@@ -1,0 +1,141 @@
+.avanzados p>span {
+	color: blue;
+	font-size: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.avanzados nav+h1 {
+	color: red;
+	font-size: 4em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.avanzados p[data-prueba] {
+	border: 2px solid chartreuse;
+}
+
+.avanzados p[data-prueba="especial"] {
+	background: coral;
+}
+
+.avanzados p[data-prueba="especial2"] {
+	background: khaki;
+	border-color: red;
+}
+
+.basicos code {
+	color: red;
+	background-color: rgb(233, 229, 229);
+	font-family: monospace;
+}
+
+.basicos #texto-verde {
+	color: green;
+}
+
+.basicos .titulo {
+	color: red;
+	font-size: 20px;
+}
+
+.basicos .texto-rosa {
+	color: pink;
+}
+
+.especificos p .especial {
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.especificos p.especial {
+	color: olive;
+	background-color: #FFF;
+}
+
+.especificos #basico tr:nth-child(2n) {
+	background-color: lightgray;
+}
+
+.especificos #basico tr:first-child {
+	background-color: rgb(228, 97, 97);
+}
+
+.especificos #basico tr:last-child {
+	background-color: rgb(163, 211, 81);
+}
+
+.pseudo p::first-letter {
+	font-family: 'Algerian';
+	font-weight: 800;
+	font-size: 2em;
+	color: red;
+	text-decoration: underline blue;
+}
+
+.pseudo p:empty {
+	background: lightblue;
+}
+
+/*span:first-child {
+            background: lightcoral;
+        }*/
+.pseudo tr:first-of-type {
+	background: lightgreen;
+}
+
+.pseudo tr:last-child {
+	background: mediumorchid;
+}
+
+.pseudo *[data-resaltar]:not(p) {
+	border: 3px solid yellow;
+}
+
+.pseudo div:first-of-type {
+	display: inline-block;
+	width: 40%;
+}
+
+.pseudo table {
+	width: 90%;
+}
+
+.pseudo #logo {
+	position: relative;
+	display: inline-block;
+	width: 375px;
+	height: 375px;
+	border-radius: 114px 56px 200px 88px;
+	border: 16px solid rgb(27, 20, 80);
+	box-shadow: inset 0px 0px 36px 3px rgba(74, 74, 74, 0.74);
+	background-color: #433A8A;
+	color: white;
+	font-size: 5em;
+	text-align: center;
+	/*padding: 8% 5% 5% 3%;*/
+}
+
+.pseudo #logo span:first-child {
+	top: -90px;
+	left: 45px;
+	position: absolute;
+	color: rgb(248, 36, 36);
+	font-size: 4.5em;
+	font-family: 'Palatino Linotype';
+}
+
+.pseudo #logo span:nth-child(2) {
+	position: absolute;
+	top: 50px;
+	left: 130px;
+	color: rgb(248, 232, 14);
+	font-family: 'Palatino Linotype';
+}
+
+.pseudo #logo span:nth-child(3) {
+	position: absolute;
+	top: 190px;
+	left: 125px;
+	color: rgb(248, 232, 14);
+	font-family: 'Palatino Linotype';
+}

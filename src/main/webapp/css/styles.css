@@ -1,0 +1,204 @@
+/*
+    Hoja de Estilos
+    esto es un comentario de bloque.
+    @auto: Raúl
+    @version: 1.0
+    @tags: css, basic, etc...
+    @licencia: mit
+
+*/
+@import url("reset.css");
+
+@import url("impresora.css") print;
+
+@import url("normalize.css");
+
+.logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.glowbox {
+	position: relative;
+	background: #ecf0f5;
+}
+
+.glowbox:before, .glowbox:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000,
+		#fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+	z-index: -1;
+	animation: animate 20s linear infinite;
+}
+
+.glowbox:after {
+	filter: blur(20px);
+}
+
+@
+keyframes animate { 
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position:0 0;
+	}
+}
+
+/*--------------Bootstrap-----------------*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: -webkit-linear-gradient(top, #fff 40%, #FF4D4D 80%)
+		no-repeat center center fixed;
+	background: -moz-linear-gradient(top, #fff 40%, #FF4D4D 80%) no-repeat
+		center center fixed;
+	background: -ms-linear-gradient(top, #fff 40%, #FF4D4D 80%) no-repeat
+		center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image: linear-gradient(black, rgba(78, 148, 189, .75), black);
+}
+
+main{
+	max-width: 1024px;
+}
+
+h1 {
+	font-size: 3em;
+	text-transform: uppercase;
+	color: white;
+}
+
+h2 {
+	font-size: 2em;
+	text-transform: capitalize;
+}
+
+h3 {
+	font-size: 1.5em;
+	text-transform: capitalize;
+}
+
+section {
+	border: 3px solid black;
+	background: rgb(231, 231, 231);
+	padding: 1%;
+	margin: 5%;
+	-webkit-box-shadow: 28px 26px 25px 0px rgba(0, 0, 0, 0.49);
+	-moz-box-shadow: 28px 26px 25px 0px rgba(0, 0, 0, 0.49);
+	box-shadow: 28px 26px 25px 0px rgba(0, 0, 0, 0.49);
+}
+
+code {
+	color: firebrick;
+	background-color: lightgray;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav a {
+	font-size: 150%;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	padding: 8px 20px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+footer {
+	color: #D8D8D8;
+	max-width: 1024px;
+}
+
+.footer-wrapper {
+	height: 3em;
+	background: #da2734;
+}
+
+#usuario{
+	border: 0;
+	background: none;
+	padding: 0;
+	margin: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	right: 1%;
+	top: auto;
+}
+
+#usuario a {
+	font-size: 125%;
+	font-weight: bold;
+	padding: 0;
+}
+
+.box {
+	display: inline-block;
+	width: 15%;
+	height: 10%;
+	border: 1px solid teal;
+	background-color: royalblue;
+	border-radius: 10%;
+	color: white;
+	font-size: 5em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.parallax {
+	/* The image used */
+	background-image: url(/helloweb/images/office.jpg);
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.85;
+}
+
+.bg-navbar{
+	background-color: #DA2734;	
+}
+
+.portrait{
+	max-width: 2vw;
+	max-height: 2vh;
+}
+
+td>img{
+	height:15vh;
+	width: 10vw;
+}
+
+@media screen and (max-width: 768px) {
+	
+	#paralax {
+		display: none;
+	}
+	
+	.nav-wrapper {
+		min-height: 5em;
+	}
+	
+	#usuario{
+		right: 35vw;
+		top: 1%;
+	}
+}
+
+}
+
+

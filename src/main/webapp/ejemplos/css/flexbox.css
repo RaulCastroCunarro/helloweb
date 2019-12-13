@@ -1,0 +1,25 @@
+.container {
+	border: 5px solid black;
+	width: 80%;
+	height: 800px;
+	margin: auto;
+	margin-top: 1%;
+	padding: 0.5%;
+	
+	/*Flexbox*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.container div {
+	border: 5px solid teal;
+	background-color: aqua;
+	width: 30%;
+	min-height: 120px;
+	
+	/*Flexbox*/
+	
+}

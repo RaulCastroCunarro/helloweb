@@ -1,0 +1,27 @@
+table {
+	width: 50%;
+	margin: auto;
+	border: 3px solid black;
+}
+
+th {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: grey;
+	border: 2px solid black;
+	color: white;
+    font-weight: bolder;
+}
+
+td {
+	border: 1px solid #000;
+	text-align: center;
+	text-transform: capitalize;
+	width: 50%;
+	border: 2px solid black;
+}
+
+
+td:hover {
+	background-color: crimson;
+}

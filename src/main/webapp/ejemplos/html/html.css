@@ -1,0 +1,97 @@
+.boxmodel {
+	padding: 1% 7% 7% 7%;
+}
+
+.boxmodel span {
+	border: 3px dotted red;
+	padding: 5px;
+}
+
+.boxmodel p {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.boxmodel .box-texto p {
+	border: none;
+	padding: 0px;
+}
+
+.boxmodel p.prueba {
+	color: teal;
+	border: 5px solid green;
+	margin: 10px;
+	padding: 20px;
+	/*shothand para los 4 lados*/
+	/*padding 20px 40px;            /*shorthand para arriba-abajo y derecha-izquierda*/
+	/*padding 20px 40px 30px;       /*shorthand para arriba, derecha-izquierda, abajo*/
+	/*padding: 20px 10px 15px 25px; /*shorthand para cada lado*/
+}
+
+.tachado {
+	text-decoration: line-through;
+}
+
+.formulario {
+	max-width: 1024px;
+	margin: auto;
+}
+
+.formulario form {
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+.formulario input[type="text"]:valid {
+	color: green;
+}
+
+.formulario input[type="text"]:invalid {
+	color: red;
+}
+
+.posicionamiento span {
+	border: 3px dotted red;
+}
+
+.posicionamiento p {
+	border: 1px solid black;
+	color: white;
+}
+
+.posicionamiento .absoluto {
+	background-color: red;
+	border-radius: 50%;
+	padding: 10px;
+	color: white;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.posicionamiento .fijo {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.posicionamiento .contenedor {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.posicionamiento .contenedor .texto {
+	position: absolute;
+	top: 155px;
+	background-color: rgba(0, 0, 0, 0.144);
+	width: 200px;
+	height: 200px;
+}
+
+.posicionamiento .contenedor:hover .texto {
+	top: -5px;
+	transition: top 2s;
+}

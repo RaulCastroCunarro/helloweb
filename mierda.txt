@@ -1,0 +1,7 @@
+Etiquetas = taglib o JSTL
+
+Producto (id, nombre, precio, imagen, descripcion, descuento)
+
+WebApp-->Productos-->index.jsp y formulario.jsp (Crear, Editar y Eliminar)
+
+1 Controlador que escuche en /producto
