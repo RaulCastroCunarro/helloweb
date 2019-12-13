@@ -77,35 +77,33 @@ public class PerrosController2 extends HttpServlet {
 		LOG.trace("doGET");
 		
 		int id = (request.getParameter("id") == null) ? 0 : Integer.parseInt(request.getParameter("id")) ;
-		boolean adoptar = (request.getParameter("adoptar") == null) ? false : true;
-		boolean editar = ( request.getParameter("editar") == null) ? false : true;
+		String accion = request.getParameter("accion");
 		
-		LOG.debug("id= " + id + " adoptar=" + adoptar + " editar="+ editar);
+		LOG.debug("id= " + id + " accion=" + accion);
 		
 		if ( id > 0 ) {
 			
 			//buscar perro en array
 			Perro perro = dao.getById(id);
 			
-			
-			if( adoptar ) {							
+			switch (accion) {
+			case "adoptar":
 				try {
 					dao.delete(id);
 					mensaje = "Ya has adoptado al perro, gracias";
 				} catch (Exception e) {
 					mensaje = "No se puede Eliminar el perro";
 				}
-				
-			}
-			
-			if ( editar ) {
-				
-				try {
+				break;
+
+			case "editar":
+				/*try {
 					dao.update(id, perro);
 				} catch (Exception e) {
 					mensaje = "No se puede Modificar el perro";
-				}
+				}*/
 				request.setAttribute("perroEditar", perro);
+				break;
 			}
 			
 			
@@ -137,6 +135,7 @@ public class PerrosController2 extends HttpServlet {
 			Perro perro = new Perro();			
 			perro.setNombre(nombre);
 			perro.setFoto(imagen);
+			perro.setId(id);
 			
 			try {
 				dao.update(id, perro);

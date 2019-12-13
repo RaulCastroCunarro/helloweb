@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <%
-	String titulo = "Perros";
+	String titulo = "Productos";
 	String estilo = "";
 %>
 
@@ -11,9 +11,7 @@
 <%@include file="/includes/navegador.jsp"%>
 
 
-<h1>Perros con JSTL</h1>
-
-<p>El mismo ejemplo para hacer un CRUD pero usando taglib y EL</p>
+<h1>Productos</h1>
 
 
 <div class="container">
@@ -23,28 +21,14 @@
 
 	<!-- Page Heading -->
 	<h1 class="h3 mb-2 mt-4 text-gray-800 text-white">Listado de
-		Perros</h1>
+		Productos</h1>
 	<p class="mb-4 text-white">En esta tabla aparece un listado de los
-		Perros dados de alta en el sistema.</p>
+		Productos dados de alta en el sistema.</p>
 
-	<c:if test="${empty perroEditar}">
-		<!--No tenemos perro para Editar, vamos a Inicializarlo-->
-		<jsp:useBean id="perroEditar" class="com.ipartek.formacion.model.pojo.Perro"></jsp:useBean>
-	</c:if>
-	
-	<form action="perros2" method="post">
-
-		<input type="number" name="id" value="${perroEditar.id}" required>
-		<input type="text" name="nombre" value="${perroEditar.nombre}"
-			placeholder="Nombre del Perro" required> <input type="url"
-			name="imagen" value="${perroEditar.foto}"
-			placeholder="URL de la imagen del Perro" required> <input
-			type="submit" value="Inscribir">
-	</form>
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-center">Perros</h6>
+			<h6 class="m-0 font-weight-bold text-center">Productos</h6>
 		</div>
 		<div class="card-body">
 			<div class="table-responsive">
@@ -55,8 +39,10 @@
 							<th>Id</th>
 							<th>Foto</th>
 							<th>Nombre</th>
-							<th>Raza</th>
-							<th>Fecha Nacimiento</th>
+							<th>Precio</th>
+							<th>Descripción</th>
+							<th>Descuento</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tfoot>
@@ -64,18 +50,25 @@
 							<th>Id</th>
 							<th>Foto</th>
 							<th>Nombre</th>
-							<th>Raza</th>
-							<th>Fecha Nacimiento</th>
+							<th>Precio</th>
+							<th>Descripción</th>
+							<th>Descuento</th>
+							<th>Acciones</th>
 						</tr>
 					</tfoot>
 					<tbody>
-						<c:forEach items="${perros}" var="p">
+						<c:forEach items="${productos}" var="p">
 							<tr>
 								<td>${p.id}</td>
 								<td><img class="img-thumbnail rounded-circle" src="${foto}"></td>
 								<td>${p.nombre}</td>
-								<td><a href="perros2?id=${p.id}&accion=adoptar">Adoptar</a></td>
-								<td><a href="perros2?id=${p.id}&accion=editar">Editar</a></td>
+								<td>${p.precio}</td>
+								<td>${p.descripcion}</td>
+								<td>${p.descuento}</td>
+								<td>
+									<a class="btn btn-primary" href="productos?id=${p.id}&accion=editar">Editar</a>
+									<a class="btn btn-danger" href="productos?id=${p.id}&accion=eliminar">Eliminar</a>
+									</td>
 							</tr>
 						</c:forEach>
 					</tbody>

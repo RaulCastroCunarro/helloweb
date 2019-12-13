@@ -116,6 +116,8 @@
 						href="ejemplos/rr/login/login.jsp?<%=version%>">Login</a>
 					<a class="dropdown-item"
 						href="ejemplos/rr/formularios/deportes.jsp?<%=version%>">Deportes</a>
+					<a class="dropdown-item"
+						href="productos/index.jsp?<%=version%>">Productos</a>
 				</div></li>
 		</ul>
 	</div>
